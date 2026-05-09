@@ -48,6 +48,9 @@ def test_withdraw_decreases_balance(account_with_100_balance):
     assert account_with_100_balance.balance == 70.0
 
 
+
+
+
 def test_withdraw_more_than_balance_raises(account_with_100_balance):
     with pytest.raises(ValueError, match="Brak wystarczających środków"):
         account_with_100_balance.withdraw(200.0)
